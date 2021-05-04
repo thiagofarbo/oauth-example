@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: oauth
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: company
+
+security:
+  oauth2:
+    client:
+      scope: password
+
