@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class CompanyService {
@@ -20,13 +19,7 @@ public class CompanyService {
     }
 
     public Company find(final String id){
-//        final Optional<Company> company = repository.findById(id);
-        Company company = new Company();
-        company.setId("1");
-        company.setAddress("Street");
-        company.setName("Microsoft");
-        company.setPhone("11112222");
-
-        return company;
+        final Optional<Company> company = repository.findById(id);
+        return company.get();
     }
 }
